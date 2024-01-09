@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html class="data-page">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link id="themeStylesheet" rel="stylesheet" type="text/css" href="light-theme.css">
+    <title>Données du Capteur - Capteur de Pollution</title>
+</head>
+<body>
+    <header class="header">
+        <!-- <img src="your-logo.png" alt="Logo" class="logo body-logo"> -->
+        <h1>Tableau de bord</h1>
+    </header>
+
+    <label class="switch" id="themeSwitch">
+        <input type="checkbox" id="themeCheckbox">
+        <span class="slider"></span>
+    </label>
+
+    <section class="data-section">
+        <h2>Capteurs cour extérieur</h2>
+
+        <div class="sensor-data">
+            <div class="sensor" id="sensor1">
+                <h3>Température</h3>
+                <p>Température extérieur : <span class="temp" id="DATA-NODE-1">0</span> °C</p>
+                <p class="explanation" style="display: none;">Ce capteur mesure la température extérieur.</p>
+            </div>
+
+            <div class="sensor" id="sensor2">
+                <h3>Lumière</h3>
+                <p>Luminosité : <span class="lum" id="DATA-NODE-2">1</span> lux</p>
+                <p class="explanation" style="display: none;">Ce capteur mesure la luminosité extérieur.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="data-section">
+        <h2>Capteurs gymnase</h2>
+
+        <div class="sensor-data">
+            <div class="sensor" id="sensor3">
+                <h3>Qualité de l'air</h3>
+                <p>Niveau de CO2 : <span class="co2" id="DATA-MEGA-DISTANT-1">0</span> /1000</p>
+                <p class="explanation" style="display: none;">Ce capteur mesure le taux de CO2 dans le gymnase.</p>
+            </div>
+
+            <div class="sensor" id="sensor4">
+                <h3>Bruit</h3>
+                <p>Niveau de bruit : <span class="dB" id="DATA-MEGA-DISTANT-2">0</span> /1023</p>
+                <p class="explanation" style="display: none;">Ce capteur mesure le niveau sonore dans le gymnase.</p>
+            </div>
+
+            <div class="sensor" id="sensor5">
+                <h3>Nombre de places</h3>
+                <p>Nombre de personne : <span class="pers" id="DATA-MEGA-DISTANT-3">0</span> personnes</p>
+                <p class="explanation" style="display: none;">Ce capteur compte le nombre de personne présentes dans le gymnase.</p>
+            </div>
+        </div>
+    </section>
+
+    <div id="warningModal" class="modal" onclick="closeWarningModal()">
+        <div class="modal-content">
+            <span class="close" onclick="closeWarningModal()">&times;</span>
+            <h2>Attention !</h2>
+            <p id="warningMessage"></p>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; Projet transmission de l'information 2023 - Capteur de Pollution</p>
+    </footer>
+
+    <script src="script.js"></script>
+	<!--<script src="script-data-reception.js"></script>-->
+</body>
+</html>
